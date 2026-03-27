@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrarySourceAsset
+  m_Library:
+  - m_Name: pages
+    m_Hash: 544531829
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: pageAnim_0
+      m_Hash: 581317569
+      m_Sprite: {fileID: 21300000, guid: 14504cdf68986b344b878d8c95179c79, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 14504cdf68986b344b878d8c95179c79, type: 3}
+    - m_Name: pageAnim_1
+      m_Hash: 362873687
+      m_Sprite: {fileID: 21300000, guid: 5a6df8d8a8e40ae4b856b677723e6a93, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 5a6df8d8a8e40ae4b856b677723e6a93, type: 3}
+    - m_Name: pageAnim_2
+      m_Hash: 212357869
+      m_Sprite: {fileID: 21300000, guid: bef0550c3caca0f469da29a2b0643de0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: bef0550c3caca0f469da29a2b0643de0, type: 3}
+    - m_Name: pageAnim_3
+      m_Hash: 1001349755
+      m_Sprite: {fileID: 21300000, guid: 456bad41b098df34581450deadf2626c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 456bad41b098df34581450deadf2626c, type: 3}
+    - m_Name: pageAnim_4
+      m_Hash: 634124248
+      m_Sprite: {fileID: 21300000, guid: aa32490d96bf3c849a81fc38f454e8bc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: aa32490d96bf3c849a81fc38f454e8bc, type: 3}
+    - m_Name: pageAnim_5
+      m_Hash: 315410254
+      m_Sprite: {fileID: 21300000, guid: 746c75aaba6e7c44ab9227101cdb3b25, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 746c75aaba6e7c44ab9227101cdb3b25, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 639099812384854845
+  m_Version: 1
