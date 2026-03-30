@@ -3,31 +3,54 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    public Button journalButton;
     [SerializeField] private Camera cam;
 
-    [Header("Pages Elements")]
-    [SerializeField] private GameObject pannels;
-    public float duration = 0.2f;
-    private bool faded = false;
+    [Header("Pages Tabs")]
+    [SerializeField] private GameObject allTabs; // all pages to fade out 
+    [SerializeField] private GameObject defaultTab; // specific field
+    [SerializeField] private GameObject buttons; // specific field
+    // private bool faded = false;
 
     [Header("Animation Elements")]
     [SerializeField] private GameObject journal;
     [SerializeField] private float fps = 0.02f;
+    public float duration = 3f;
     [SerializeField] private Sprite[] pages;
 
+    [Header("Journal Tabs")]
+    [SerializeField] private List<GameObject> tabs;
+    private List<GameObject> inactiveTabs;
+    private bool y = false;
 
-    void Awake()
+
+    public void PressTurnPage(GameObject target)
     {
+        y = true;
 
+        inactiveTabs = tabs;
+        // fade out page
+        // StartCoroutine(FadeOut(WhichChild(0)));
+        // StartCoroutine(FadeOut(WhichChild(1)));
+        // foreach (var x in tabs) { Debug.Log(x); }
+        foreach (var x in tabs) { StartCoroutine(FadeOut(x)); }
+
+        StartCoroutine(TurnPage());
+        // faded = !faded;
+
+        // // bring new page up
+        StartCoroutine(FadeIn(target));
+        // faded = !faded;
+
+        y = false;
     }
 
     public IEnumerator TurnPage()
     {
-        Debug.Log("Here");
+        Debug.Log("Turning page");
         for (int x = 0; x < 7; x++)
         {
             journal.GetComponent<Image>().sprite = pages[x];
@@ -35,21 +58,78 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void MakeVisible()
+    public IEnumerator FadeOut(GameObject target)
     {
-        if (journal.activeInHierarchy == false) { journal.SetActive(true); }
-        else { journal.SetActive(false); }
-        Debug.Log("Button clicked " + journal.activeInHierarchy);
-        // Renderer red = targetObject.GetComponent<Renderer>();
-        // rend.material.color = Rnadom.ColorHSV();
-        // leftPage.SetActive(true);
-        // rightPage.SetActive(true);
-        pannels.transform.GetChild(0).gameObject.SetActive(true);
-        pannels.transform.GetChild(1).gameObject.SetActive(true);
-        pannels.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+        float counter = 0f;
+
+        Debug.Log("fade out");
+        CanvasGroup targ = target.GetComponent<CanvasGroup>();
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            targ.alpha = Mathf.Lerp(targ.alpha, 0, counter / duration);
+
+            yield return null;
+        }
     }
 
-    public void showCoordinates()
+    public IEnumerator FadeIn(GameObject target)
+    {
+        CanvasGroup targ = target.GetComponent<CanvasGroup>();
+
+        float counter = 0f;
+
+        while (counter < 3) { counter += Time.deltaTime; }
+
+        counter = 0f;
+        Debug.Log(target + " fade in");
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            targ.alpha = Mathf.Lerp(0, 1, counter / duration);
+
+            yield return null;
+        }
+    }
+
+    public void MakeVisible(GameObject obj)
+    {
+        obj.SetActive(!obj.activeInHierarchy);
+
+        // if (obj.activeInHierarchy) obj.SetActive(false);  obj.SetActive(true);
+
+        if (obj.name == "Journal")
+        {
+            Debug.Log("Journal Visibility");
+            // defaultTab.SetActive(obj.activeInHierarchy);
+            // buttons.SetActive(obj.activeInHierarchy);
+        }
+        // else if (obj.transform.childCount > 0) { AbleChildren(obj); }
+
+        Debug.Log("Button clicked " + obj.name);
+    }
+
+    private List<GameObject> WhichChild(GameObject target)
+    {
+        inactiveTabs.Remove(target);
+
+        return inactiveTabs;
+    }
+
+    public void AbleChildren(GameObject parent)
+    {
+        // Debug.Log("disable children");
+        for (int i = 0; i < parent.transform.childCount; i++)
+        {
+            var child = parent.transform.GetChild(i).gameObject;
+
+            child.SetActive(!child.activeSelf);
+        }
+    }
+
+    public void ShowCoordinates()
     {
         cam.cullingMask ^= 1 << LayerMask.NameToLayer("Coordinates");
     }
@@ -57,12 +137,12 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // journal.SetActive(false);
+        MakeVisible(journal);
+        // MakeVisible(defaultTab);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        // if (y == false) StopAllCoroutines();
     }
 }
