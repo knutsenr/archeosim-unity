@@ -24,13 +24,10 @@ public class GameManager : MonoBehaviour
     [Header("Journal Tabs")]
     [SerializeField] private List<GameObject> tabs;
     private List<GameObject> inactiveTabs;
-    private bool y = false;
 
 
     public void PressTurnPage(GameObject target)
     {
-        y = true;
-
         inactiveTabs = tabs;
         // fade out page
         // StartCoroutine(FadeOut(WhichChild(0)));
@@ -44,8 +41,6 @@ public class GameManager : MonoBehaviour
         // // bring new page up
         StartCoroutine(FadeIn(target));
         // faded = !faded;
-
-        y = false;
     }
 
     public IEnumerator TurnPage()

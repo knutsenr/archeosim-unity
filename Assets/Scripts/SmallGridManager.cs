@@ -44,9 +44,9 @@ public class SmallGridManager : MonoBehaviour
     {
         tiles = new Dictionary<Vector2, SmallTile>();
 
-        for (int x = 0; x < wid; x++)
+        for (int y = 0; y < hei; y++)
         {
-            for (int y = 0; y < hei; y++)
+            for (int x = 0; x < wid; x++)
             {
                 // SmallTile spawnedTile = Instantiate(tilePrefab, new Vector2(x, y), Quaternion.identity);
                 SmallTile spawnedTile = Instantiate(tilePrefab, grid.transform);
