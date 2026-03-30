@@ -6,14 +6,10 @@ using System.Collections;
 
 public class SmallGridManager : MonoBehaviour
 {
-
     [SerializeField] private GridLayoutGroup grid;
     [SerializeField] private int wid, hei;
     [SerializeField] private SmallTile tilePrefab;
-
-    // [SerializeField] private TMP_Text coordinatePairText;
-    private int randomX;
-    private int randomY;
+    private Dictionary<Vector2, SmallTile> tiles;
 
     private static SmallGridManager _instance;
     public static SmallGridManager Instance // yes this one is cap
@@ -34,31 +30,35 @@ public class SmallGridManager : MonoBehaviour
         _instance = this;
     }
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        grid.constraintCount = wid;
+        // grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+        // grid.constraintCount = wid;
 
         GenerateGrid();
         // PickCoordinate();
-
     }
 
     void GenerateGrid()
     {
-        for (int y = 0; y < hei; y++)
+        tiles = new Dictionary<Vector2, SmallTile>();
+
+        for (int x = 0; x < wid; x++)
         {
-            for (int x = 0; x < wid; x++)
+            for (int y = 0; y < hei; y++)
             {
+                // SmallTile spawnedTile = Instantiate(tilePrefab, new Vector2(x, y), Quaternion.identity);
                 SmallTile spawnedTile = Instantiate(tilePrefab, grid.transform);
+
+                tiles[new Vector2(x, y)] = spawnedTile;
                 spawnedTile.name = $"{x}, {y}";
 
-                TMP_Text text = spawnedTile.GetComponentInChildren<TMP_Text>();
-                text.text = spawnedTile.name;
+                spawnedTile.coordinateBox.text = $"{x}, {y}";
 
-                var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
+                Debug.Log($"{x}, {y}");
+
+                // var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
 
                 // spawnedTile.Init(isOffset);
 
@@ -67,9 +67,4 @@ public class SmallGridManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

@@ -11,7 +11,7 @@ public class SmallTile : MonoBehaviour
     [SerializeField] public Color baseColor, obstacleColor, artifactColor, nothingColor;
     private int x = 0;
     [SerializeField] private Image im;
-    private string currentCoordinateName;
+    [SerializeField] public TextMeshProUGUI coordinateBox;
     public bool canDig = true;
     public bool digArtifact = false;
     public bool digNothing = true;
@@ -19,8 +19,6 @@ public class SmallTile : MonoBehaviour
     public void SwitchColor()
     {
         if (x > 3) x = 0; else x++;
-
-        // (x > 3) ? (x = 0) : x++;
         Debug.Log(x);
 
         switch (x)
@@ -44,15 +42,7 @@ public class SmallTile : MonoBehaviour
         // butt.colors = cb;
     }
 
-    // public void Init(bool isOffset)
-    // {
-    //     im.color = isOffset ? offsetColor : baseColor;
-    // }
-
     void Start()
     {
-        // ColorBlock cb = button.colors;
-        // cb.normalColor = newColor;
-        // butt.colors = cb;
     }
 }

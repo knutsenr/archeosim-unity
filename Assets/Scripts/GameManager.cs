@@ -138,7 +138,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         MakeVisible(journal);
-        // MakeVisible(defaultTab);
     }
 
     void Update()

@@ -12,8 +12,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private GameObject spriteLayer;
     [SerializeField] private GameObject obstacle;
     [SerializeField] private Collider2D coll;
-    [SerializeField] public TextMeshProUGUI coordinateBox;
-
+    public TextMeshProUGUI coordinateBox;
 
     public bool canDig = true;
     public bool digArtifact = false;
@@ -25,8 +24,6 @@ public class Tile : MonoBehaviour
         rend.color = isOffset ? offsetColor : baseColor;
 
         spriteLayer.GetComponent<SpriteRenderer>().flipX = isOffset ? true : false;
-
-        // if (isOffset) { spriteLayer.SetActive(true); } else { spriteLayer.SetActive(false); }
 
         if (rand < 5) { IsObstacle(); } else if (rand > 5 && rand < 60) { digArtifact = true; } else { canDig = true; digNothing = true; }
     }
