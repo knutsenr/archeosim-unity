@@ -36,7 +36,6 @@ public class GridManager : MonoBehaviour
         cam.transform.position = new Vector3((float)wid / 2 - 0.5f, (float)hei / 2 - 0.5f, -10);
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         GenerateGrid();

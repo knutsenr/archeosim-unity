@@ -30,14 +30,12 @@ public class SmallGridManager : MonoBehaviour
         _instance = this;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         // grid.constraintCount = wid;
 
         GenerateGrid();
-        // PickCoordinate();
     }
 
     void GenerateGrid()
@@ -56,7 +54,7 @@ public class SmallGridManager : MonoBehaviour
 
                 spawnedTile.coordinateBox.text = $"{x}, {y}";
 
-                Debug.Log($"{x}, {y}");
+                // Debug.Log($"{x}, {y}");
 
                 // var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
 
@@ -66,5 +64,7 @@ public class SmallGridManager : MonoBehaviour
             }
         }
     }
+
+
 
 }

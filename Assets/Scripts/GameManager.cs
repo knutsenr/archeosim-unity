@@ -98,6 +98,7 @@ public class GameManager : MonoBehaviour
         if (obj.name == "Journal")
         {
             Debug.Log("Journal Visibility");
+            foreach (GameObject a in WhichChild(defaultTab)) { StartCoroutine(FadeOut(a)); }
             // defaultTab.SetActive(obj.activeInHierarchy);
             // buttons.SetActive(obj.activeInHierarchy);
         }
@@ -108,6 +109,11 @@ public class GameManager : MonoBehaviour
 
     private List<GameObject> WhichChild(GameObject target)
     {
+        inactiveTabs = new List<GameObject>();
+        foreach (GameObject z in tabs)
+        {
+            inactiveTabs.Add(z); Debug.Log(z);
+        }
         inactiveTabs.Remove(target);
 
         return inactiveTabs;
