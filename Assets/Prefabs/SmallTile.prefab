@@ -151,10 +151,7 @@ MonoBehaviour:
   artifactColor: {r: 0.27440238, g: 1, b: 0, a: 1}
   nothingColor: {r: 1, g: 0, b: 0.96657753, a: 1}
   im: {fileID: 5782524142169080712}
-  coordinateBox: {fileID: 147484861523081823}
-  canDig: 1
-  digArtifact: 0
-  digNothing: 1
+  buttonCoordinate: {fileID: 147484861523081823}
 --- !u!1 &3074686638233090667
 GameObject:
   m_ObjectHideFlags: 0

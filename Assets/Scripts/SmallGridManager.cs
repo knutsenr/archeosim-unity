@@ -1,70 +1,70 @@
-using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using TMPro;
-using System.Collections;
+// using UnityEngine;
+// using System.Collections.Generic;
+// using UnityEngine.UI;
+// using TMPro;
+// using System.Collections;
 
-public class SmallGridManager : MonoBehaviour
-{
-    [SerializeField] private GridLayoutGroup grid;
-    [SerializeField] private int wid, hei;
-    [SerializeField] private SmallTile tilePrefab;
-    private Dictionary<Vector2, SmallTile> tiles;
+// public class SmallGridManager : MonoBehaviour
+// {
+//     [SerializeField] private GridLayoutGroup gridLayout;
+//     [SerializeField] private int wid, hei;
+//     [SerializeField] private SmallTile smallTilePrefab;
+//     private Dictionary<Vector2, SmallTile> smallTiles;
 
-    private static SmallGridManager _instance;
-    public static SmallGridManager Instance // yes this one is cap
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                Debug.LogError("Smallgrid null");
-            }
+//     void Start()
+//     {
+//         // grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+//         // grid.constraintCount = wid;
 
-            return _instance;
-        }
-    }
+//         GenerateSmallGrid();
+//     }
 
-    private void Awake()
-    {
-        _instance = this;
-    }
+//     void GenerateSmallGrid()
+//     {
+//         smallTiles = new Dictionary<Vector2, SmallTile>();
 
-    void Start()
-    {
-        // grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        // grid.constraintCount = wid;
+//         for (int y = 0; y < hei; y++)
+//         {
+//             for (int x = 0; x < wid; x++)
+//             {
+//                 // SmallTile smallSpawnedTile = Instantiate(tilePrefab, new Vector2(x, y), Quaternion.identity);
+//                 SmallTile smallSpawnedTile = Instantiate(smallTilePrefab, gridLayout.transform);
 
-        GenerateGrid();
-    }
+//                 smallTiles[new Vector2(x, y)] = smallSpawnedTile;
+//                 smallSpawnedTile.name = $"{x}, {y}";
 
-    void GenerateGrid()
-    {
-        tiles = new Dictionary<Vector2, SmallTile>();
+//                 smallSpawnedTile.smallCoordinate.text = $"{x}, {y}";
 
-        for (int y = 0; y < hei; y++)
-        {
-            for (int x = 0; x < wid; x++)
-            {
-                // SmallTile spawnedTile = Instantiate(tilePrefab, new Vector2(x, y), Quaternion.identity);
-                SmallTile spawnedTile = Instantiate(tilePrefab, grid.transform);
+//                 // Debug.Log($"{x}, {y}");
 
-                tiles[new Vector2(x, y)] = spawnedTile;
-                spawnedTile.name = $"{x}, {y}";
+//                 // var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
 
-                spawnedTile.coordinateBox.text = $"{x}, {y}";
+//                 // smallSpawnedTile.Init(isOffset);
 
-                // Debug.Log($"{x}, {y}");
-
-                // var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
-
-                // spawnedTile.Init(isOffset);
-
-                // tiles[new Vector2(x, y)] = spawnedTile;
-            }
-        }
-    }
+//                 // tiles[new Vector2(x, y)] = smallSpawnedTile;
+//             }
+//         }
+//     }
 
 
+//     // private static SmallGridManager _instance;
+//     // public static SmallGridManager Instance // yes this one is cap
+//     // {
+//     //     get
+//     //     {
+//     //         if (_instance == null)
+//     //         {
+//     //             Debug.LogError("Smallgrid null");
+//     //         }
 
-}
+//     //         return _instance;
+//     //     }
+//     // }
+
+//     private void Awake()
+//     {
+//         // _instance = this;
+//     }
+
+
+// }

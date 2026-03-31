@@ -29,18 +29,15 @@ public class GameManager : MonoBehaviour
     public void PressTurnPage(GameObject target)
     {
         inactiveTabs = tabs;
+
         // fade out page
-        // StartCoroutine(FadeOut(WhichChild(0)));
-        // StartCoroutine(FadeOut(WhichChild(1)));
-        // foreach (var x in tabs) { Debug.Log(x); }
         foreach (var x in tabs) { StartCoroutine(FadeOut(x)); }
 
+        // turn page animation
         StartCoroutine(TurnPage());
-        // faded = !faded;
 
         // // bring new page up
         StartCoroutine(FadeIn(target));
-        // faded = !faded;
     }
 
     public IEnumerator TurnPage()
@@ -93,16 +90,11 @@ public class GameManager : MonoBehaviour
     {
         obj.SetActive(!obj.activeInHierarchy);
 
-        // if (obj.activeInHierarchy) obj.SetActive(false);  obj.SetActive(true);
-
         if (obj.name == "Journal")
         {
             Debug.Log("Journal Visibility");
-            foreach (GameObject a in WhichChild(defaultTab)) { StartCoroutine(FadeOut(a)); }
-            // defaultTab.SetActive(obj.activeInHierarchy);
-            // buttons.SetActive(obj.activeInHierarchy);
+            foreach (GameObject a in WhichChild(defaultTab)) StartCoroutine(FadeOut(a));
         }
-        // else if (obj.transform.childCount > 0) { AbleChildren(obj); }
 
         Debug.Log("Button clicked " + obj.name);
     }
@@ -119,23 +111,22 @@ public class GameManager : MonoBehaviour
         return inactiveTabs;
     }
 
-    public void AbleChildren(GameObject parent)
-    {
-        // Debug.Log("disable children");
-        for (int i = 0; i < parent.transform.childCount; i++)
-        {
-            var child = parent.transform.GetChild(i).gameObject;
+    // public void AbleChildren(GameObject parent)
+    // {
+    //     // Debug.Log("disable children");
+    //     for (int i = 0; i < parent.transform.childCount; i++)
+    //     {
+    //         var child = parent.transform.GetChild(i).gameObject;
 
-            child.SetActive(!child.activeSelf);
-        }
-    }
+    //         child.SetActive(!child.activeSelf);
+    //     }
+    // }
 
     public void ShowCoordinates()
     {
         cam.cullingMask ^= 1 << LayerMask.NameToLayer("Coordinates");
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         MakeVisible(journal);

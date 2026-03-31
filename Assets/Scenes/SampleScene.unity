@@ -2235,6 +2235,8 @@ MonoBehaviour:
   hei: 9
   tilePrefab: {fileID: 7514245668261329830, guid: ffc50d1fe45840547bf75099f316a5b4, type: 3}
   cam: {fileID: 519420032}
+  smallTilePrefab: {fileID: 2926766268170946961, guid: 61eb232b16fa17448a35183bc32d1034, type: 3}
+  gridLayout: {fileID: 1944484069}
 --- !u!1 &1061224863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2969,7 +2971,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1307466873}
-  - component: {fileID: 1307466874}
   m_Layer: 5
   m_Name: GridMap
   m_TagString: Map
@@ -2998,22 +2999,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1307466874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307466872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea40d826529df8b488f9cd6b9068f5b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SmallGridManager
-  grid: {fileID: 1944484069}
-  wid: 16
-  hei: 9
-  tilePrefab: {fileID: 2926766268170946961, guid: 61eb232b16fa17448a35183bc32d1034, type: 3}
 --- !u!1 &1425563071
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,7 +4349,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 2
   m_StartAxis: 0
-  m_CellSize: {x: 40, y: 40}
+  m_CellSize: {x: 45, y: 45}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 16

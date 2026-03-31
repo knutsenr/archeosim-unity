@@ -5,12 +5,14 @@ TagManager:
   serializedVersion: 3
   tags:
   - NPC
-  - Obstacle
   - Cell
   - Map
   - Controls
-  - Goal
   - Coordinates
+  - Unit_Obstacle
+  - Unit_Unknown
+  - Unit_Artifact
+  - Unit_Empty
   layers:
   - Default
   - TransparentFX

@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 4892621651620740907}
   m_Layer: 3
   m_Name: Tile
-  m_TagString: Cell
+  m_TagString: Unit_Unknown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,9 +605,8 @@ MonoBehaviour:
   obstacle: {fileID: 7758974256744194623}
   coll: {fileID: 4892621651620740907}
   coordinateBox: {fileID: 5347450681904876605}
-  canDig: 1
-  digArtifact: 0
-  digNothing: 1
+  artifactChance: 65
+  obstacleChance: 5
 --- !u!61 &4892621651620740907
 BoxCollider2D:
   m_ObjectHideFlags: 0
