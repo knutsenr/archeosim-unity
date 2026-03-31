@@ -6,21 +6,22 @@ using System;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] private Color baseColor, offsetColor;
+    [SerializeField] private Color artifactColor, emptyColor;
     [SerializeField] private SpriteRenderer rend;
     [SerializeField] public GameObject hilight;
     [SerializeField] private GameObject spriteLayer;
-    [SerializeField] private GameObject obstacle;
+    [SerializeField] private GameObject obstacleLayer;
+    [SerializeField] private GameObject excavatedLayer;
     [SerializeField] private Collider2D coll;
     public TextMeshProUGUI coordinateBox;
 
     public int artifactChance;
     public int obstacleChance;
-    public bool excavated = false;
+    public bool isExcavated = false;
 
     public void Init(bool isOffset, int rand)
     {
-        rend.color = isOffset ? offsetColor : baseColor;
+        // rend.color = isOffset ? artifactColor : emptyColor;
 
         // spriteLayer.GetComponent<SpriteRenderer>().flipX = isOffset ? true : false;
 
@@ -29,30 +30,40 @@ public class Tile : MonoBehaviour
 
     public void IsObstacle()
     {
-        obstacle.SetActive(true);
+        obstacleLayer.SetActive(true);
         coll.isTrigger = false;
         gameObject.tag = "Unit_Obstacle";
     }
 
-    public void IsArtifact() { gameObject.tag = "Unit_Artifact"; }
-
-    public void IsEmpty() { gameObject.tag = "Unit_Empty"; }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void IsArtifact()
     {
-        hilight.SetActive(true);
-        if (!excavated) Dig(); else Debug.Log("Already excavated!");
+        gameObject.tag = "Unit_Artifact";
+        excavatedLayer.GetComponent<SpriteRenderer>().color = artifactColor;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void IsEmpty()
+    {
+        gameObject.tag = "Unit_Empty";
+        excavatedLayer.GetComponent<SpriteRenderer>().color = emptyColor;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        hilight.SetActive(true);
+        other.gameObject.GetComponent<PlayerController>().currentTile = this.gameObject;
+        // if (other.gameObject.GetComponent<PlayerController>().isDigging) Dig();
+        // else Debug.Log("Already excavated!");
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
     {
         hilight.SetActive(false);
+        if (isExcavated) excavatedLayer.SetActive(true);
     }
 
     public void Dig()
     {
-        excavated = true;
-
+        isExcavated = true;
         if (gameObject.tag == "Unit_Artifact") Debug.Log("Artifact found!");
         else Debug.Log("Jack Shit");
     }

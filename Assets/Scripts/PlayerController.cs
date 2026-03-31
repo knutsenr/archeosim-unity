@@ -18,11 +18,10 @@ public class PlayerController : MonoBehaviour
   float horizontalMovement;
   float verticalMovement;
   [SerializeField] InputAction interact;
-  [SerializeField] private Tile currentTile;
+  [SerializeField] public GameObject currentTile;
 
   [HideInInspector]
   public bool isDigging = false;
-
 
   // Start is called once before the first execution of Update after the MonoBehaviour is create
 
@@ -58,14 +57,6 @@ public class PlayerController : MonoBehaviour
   //   hilight.SetActive(false);
   // }
 
-  public void Dig()
-  {
-    Debug.Log("Interact");
-    isDigging = true;
-
-
-  }
-
   // Update is called once per frame
   void Update()
   {
@@ -79,9 +70,7 @@ public class PlayerController : MonoBehaviour
 
     // currentTile = gridScript.GetTileAtPosition(rb.linearVelocity);
 
-    if (interact.WasPressedThisFrame()) { Dig(); } else { isDigging = false; }
+    if (interact.WasPressedThisFrame()) { currentTile.GetComponent<Tile>().Dig(); } else { isDigging = false; }
   }
-
-
 
 }
