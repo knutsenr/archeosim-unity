@@ -3,8 +3,7 @@ using UnityEngine.InputSystem;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public DialogueLine[] dialogueLines;
-
+    public DialogueNode[] dialogueNodes;
     private bool playerInRange = false;
     public bool dialogueStarted = false;
     InputAction digAction;
@@ -21,7 +20,7 @@ public class NPCDialogue : MonoBehaviour
         if (playerInRange && dialogueStarted == false && digAction.WasPressedThisFrame())
         {
             Debug.Log("here");
-            DialogueManager.instance.StartDialogue(dialogueLines);
+            // DialogueManager.instance.StartDialogue(dialogueNodes);
             dialogueStarted = true;
         }
         if (dialogueStarted && DialogueManager.instance.dialogueFinished == true)
@@ -32,7 +31,7 @@ public class NPCDialogue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             playerInRange = true;
         }
