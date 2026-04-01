@@ -18,6 +18,7 @@ public class Tile : MonoBehaviour
     public int artifactChance;
     public int obstacleChance;
     public bool isExcavated = false;
+    public int digStage = 0;
 
     public void Init(bool isOffset, int rand)
     {
@@ -38,7 +39,7 @@ public class Tile : MonoBehaviour
     public void IsArtifact()
     {
         gameObject.tag = "Unit_Artifact";
-        excavatedLayer.GetComponent<SpriteRenderer>().color = artifactColor;
+        // excavatedLayer.GetComponent<SpriteRenderer>().color = artifactColor;
     }
 
     public void IsEmpty()
@@ -61,10 +62,24 @@ public class Tile : MonoBehaviour
         if (isExcavated) excavatedLayer.SetActive(true);
     }
 
-    public void Dig()
+    // public string Dig()
+    // {
+    //     isExcavated = true;
+    //     // if (gameObject.tag == "Unit_Artifact") Debug.Log("Artifact found!");
+    //     // else Debug.Log("Jack Shit");
+    //     return gameObject.tag;
+    // }
+
+    public int DigStage()
     {
-        isExcavated = true;
-        if (gameObject.tag == "Unit_Artifact") Debug.Log("Artifact found!");
-        else Debug.Log("Jack Shit");
+        digStage++;
+        // if (currentDig < 4) digImage.GetComponent<Image>().sprite = digImages[currentDig];
+        // else digImage.transform.GetChild(0).gameObject.GetComponent<Button>().interactable = false;
+        if (digStage > 2)
+        {
+            Debug.Log("done digging");
+            isExcavated = true;
+        }
+        return digStage;
     }
 }

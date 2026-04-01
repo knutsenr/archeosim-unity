@@ -12,13 +12,14 @@ public class PlayerController : MonoBehaviour
   Animator anim;
   private SpriteRenderer rend;
   public GridManager gridScript;
+  public GameManager gameManager;
 
   [Header("Movement Settings")]
   public float moveSpeed = 5f;
   float horizontalMovement;
   float verticalMovement;
   [SerializeField] InputAction interact;
-  [SerializeField] public GameObject currentTile;
+  public GameObject currentTile;
 
   [HideInInspector]
   public bool isDigging = false;
@@ -44,33 +45,38 @@ public class PlayerController : MonoBehaviour
     verticalMovement = context.ReadValue<Vector2>().y;
   }
 
-  // private void OnTriggerEnter2D(Collider2D other)
-  // {
-  //   if (other.tag == "Cell")
-  //   {
-  //     currentTile = other.GameObject();
-  //   }
-  // }
+  private void AnimateMove()
+  {
+    if (rb.linearVelocity.x < 0) { anim.SetTrigger("walkingLeft"); rend.flipX = true; }
+    else if (rb.linearVelocity.x > 0) { anim.SetTrigger("walkingLeft"); rend.flipX = false; }
+    else if (rb.linearVelocity.y < 0) { anim.SetTrigger("walkingForward"); }
+    else if (rb.linearVelocity.y > 0) { anim.SetTrigger("walkingBack"); }
+    else { anim.SetBool("moving", false); }
+  }
 
-  // private void OnTriggerExit2D(Collider2D other)
-  // {
-  //   hilight.SetActive(false);
-  // }
+  public void DigTile()
+  {
+    Image img = gameManager.tabs[3].transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
+    int tmp = currentTile.GetComponent<Tile>().digStage;
+
+    img.sprite = gameManager.digImages[tmp];
+    gameManager.
+      MakeVisible(gameManager.journal, gameManager.tabs[3]);
+  }
 
   // Update is called once per frame
   void Update()
   {
     rb.linearVelocity = new Vector2(horizontalMovement * moveSpeed, verticalMovement * moveSpeed);
 
-    if (rb.linearVelocity.x < 0) { anim.SetTrigger("walkingLeft"); rend.flipX = true; }
-    else if (rb.linearVelocity.x > 0) { anim.SetTrigger("walkingLeft"); rend.flipX = false; }
-    else if (rb.linearVelocity.y < 0) { anim.SetTrigger("walkingForward"); }
-    else if (rb.linearVelocity.y > 0) { anim.SetTrigger("walkingBack"); }
-    else { anim.SetBool("moving", false); }
+    AnimateMove();
 
-    // currentTile = gridScript.GetTileAtPosition(rb.linearVelocity);
-
-    if (interact.WasPressedThisFrame()) { currentTile.GetComponent<Tile>().Dig(); } else { isDigging = false; }
+    if (interact.WasPressedThisFrame())
+    {
+      DigTile();
+      // gameManager.Dig(currentTile.GetComponent<Tile>());
+    }
+    else { isDigging = false; }
   }
 
 }

@@ -16,15 +16,21 @@ public class GameManager : MonoBehaviour
     // private bool faded = false;
 
     [Header("Animation Elements")]
-    [SerializeField] private GameObject journal;
+    public GameObject journal;
     [SerializeField] private float fps = 0.02f;
     public float duration = 3f;
     [SerializeField] private Sprite[] pages;
 
     [Header("Journal Tabs")]
-    [SerializeField] private List<GameObject> tabs;
+    [SerializeField] public List<GameObject> tabs;
     private List<GameObject> inactiveTabs;
+    [SerializeField] public Sprite[] digImages;
+    private bool journalVisible = true;
 
+
+    [Header("Player")]
+    [SerializeField] private PlayerController player;
+    private GameObject currentTile;
 
     public void PressTurnPage(GameObject target)
     {
@@ -54,7 +60,7 @@ public class GameManager : MonoBehaviour
     {
         float counter = 0f;
 
-        Debug.Log("fade out");
+        // Debug.Log("fade out");
         CanvasGroup targ = target.GetComponent<CanvasGroup>();
 
         while (counter < duration)
@@ -86,17 +92,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void MakeVisible(GameObject obj)
+    public void MakeVisible(GameObject obj, GameObject visibleTab)
     {
         obj.SetActive(!obj.activeInHierarchy);
 
         if (obj.name == "Journal")
         {
-            Debug.Log("Journal Visibility");
-            foreach (GameObject a in WhichChild(defaultTab)) StartCoroutine(FadeOut(a));
+            journalVisible = !journalVisible;
+            // Debug.Log("Journal Visibility " + journalVisible);
+
+            foreach (GameObject a in WhichChild(visibleTab))
+            {
+                a.GetComponent<CanvasGroup>().alpha = 0;
+                // Debug.Log(a + "is alpha 0");
+            }
+            visibleTab.GetComponent<CanvasGroup>().alpha = 1;
         }
 
-        Debug.Log("Button clicked " + obj.name);
+        // Debug.Log("Button clicked " + obj.name);
     }
 
     private List<GameObject> WhichChild(GameObject target)
@@ -104,32 +117,35 @@ public class GameManager : MonoBehaviour
         inactiveTabs = new List<GameObject>();
         foreach (GameObject z in tabs)
         {
-            inactiveTabs.Add(z); Debug.Log(z);
+            inactiveTabs.Add(z);
         }
         inactiveTabs.Remove(target);
 
         return inactiveTabs;
     }
 
-    // public void AbleChildren(GameObject parent)
-    // {
-    //     // Debug.Log("disable children");
-    //     for (int i = 0; i < parent.transform.childCount; i++)
-    //     {
-    //         var child = parent.transform.GetChild(i).gameObject;
-
-    //         child.SetActive(!child.activeSelf);
-    //     }
-    // }
-
     public void ShowCoordinates()
     {
         cam.cullingMask ^= 1 << LayerMask.NameToLayer("Coordinates");
     }
 
+    public void Dig(Button butt)
+    {
+        currentTile = player.currentTile;
+        int temp = currentTile.GetComponent<Tile>().DigStage();
+        Image img = tabs[3].transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
+
+        img.sprite = digImages[temp];
+
+        // Debug.Log(tabs[3].GetComponent<Image>().sprite);
+
+
+        if (temp > 3) butt.interactable = false;
+    }
+
     void Start()
     {
-        MakeVisible(journal);
+        MakeVisible(journal, defaultTab);
     }
 
     void Update()
