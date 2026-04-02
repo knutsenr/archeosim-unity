@@ -200,7 +200,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""899c3a7e-d2f9-49b8-a81f-84c05e963f58"",
                     ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""Hold(duration=60,pressPoint=0.5)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ShowCoordinates"",

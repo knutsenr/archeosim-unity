@@ -187,7 +187,7 @@ TextureImporter:
         width: 1484
         height: 1958
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: siftLayer_1_1
+      name: siftLayer_1_2
       rect:
         serializedVersion: 2
         x: 3320
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: siftLayer_1_2
+      name: siftLayer_1_
       rect:
         serializedVersion: 2
         x: 1634
@@ -460,8 +460,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1400.0,"y":2000.0},"gridSpriteOffset":{"x":145.0,"y":100.0},"gridSpritePadding":{"x":100.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      siftLayer_1_: -5907322967158769555
       siftLayer_1_0: -5420210917313023333
-      siftLayer_1_1: -7717738629502174785
       siftLayer_1_10: 4165664289664509323
       siftLayer_1_11: 6086888746190113316
       siftLayer_1_12: 6890221718344981964
@@ -472,7 +472,7 @@ TextureImporter:
       siftLayer_1_17: 2274110684265230801
       siftLayer_1_18: 1899327633005918752
       siftLayer_1_19: 7136708228421184296
-      siftLayer_1_2: -5907322967158769555
+      siftLayer_1_2: -7717738629502174785
       siftLayer_1_20: -5206564579885372555
       siftLayer_1_21: -2803611169843903271
       siftLayer_1_22: -1752250665973501329

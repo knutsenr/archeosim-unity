@@ -13,6 +13,7 @@ public class ExcavateManager : MonoBehaviour
     [Header("Local Component References")]
     [SerializeField] private Image digImage;
     [SerializeField] private Image siftImage;
+    [SerializeField] private float fps = 0.4f;
 
     [Header("ImageArrays")]
     public Sprite[] digImages;
@@ -24,6 +25,9 @@ public class ExcavateManager : MonoBehaviour
     [SerializeField] private PlayerController player;
     [SerializeField] private GameManager gameManager;
 
+    private bool layerSifted = false;
+    private int tempLayer = 0;
+
     public void OpenExcavate()
     {
         int tmp = currentTile.digStage;
@@ -34,18 +38,47 @@ public class ExcavateManager : MonoBehaviour
 
     public void DigNext(Button butt)
     {
-        int temp = currentTile.DigStage();
+        tempLayer = currentTile.DigStage();
 
-        if (temp > 3) butt.interactable = false;
-        else digImage.sprite = digImages[temp];
+        if (tempLayer > 3) butt.interactable = false;
+        else
+        {
+            digImage.sprite = digImages[tempLayer];
+            siftImage.sprite = tempLayer switch
+            {
+                1 => siftLayer1[0],
+                2 => siftLayer2[0],
+                3 => siftLayer3[0],
+            };
+        }
 
-        Debug.Log(digImages[temp]);
+        Debug.Log(digImages[tempLayer]);
     }
 
     public void Sift(Button butt)
     {
-        currentLayer = currentTile.DigStage();
-        Debug.Log("Sift" + currentLayer);
+        StartCoroutine(AnimateSift(tempLayer));
+
+        if (currentTile.tag == "Unit_Artifact") Debug.Log("Artifact Here");
+        Debug.Log("Sift" + tempLayer);
+    }
+
+    public IEnumerator AnimateSift(int layer)
+    {
+        Debug.Log("Sifting switch  " + layer);
+        for (int x = 0; x < 5; x++)
+        {
+            siftImage.sprite = layer switch
+            {
+                1 => siftLayer1[x],
+                2 => siftLayer2[x],
+                3 => siftLayer3[x],
+                _ => siftLayer1[0],
+            };
+            yield return new WaitForSeconds(fps);
+        }
+
+        layerSifted = true;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

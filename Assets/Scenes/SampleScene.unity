@@ -3890,6 +3890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   digImage: {fileID: 1216211532}
   siftImage: {fileID: 382824417}
+  fps: 0.4
   digImages:
   - {fileID: -8378967279583214499, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
   - {fileID: 8318291011278641660, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
@@ -3897,9 +3898,10 @@ MonoBehaviour:
   - {fileID: 1501149643353709846, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
   siftLayer1:
   - {fileID: -5420210917313023333, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
-  - {fileID: -7717738629502174785, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
   - {fileID: -5907322967158769555, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  - {fileID: -7717738629502174785, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
   - {fileID: -7272151328562094828, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  - {fileID: -7032738230083988613, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
   siftLayer2: []
   siftLayer3: []
   player: {fileID: 1627865505}
