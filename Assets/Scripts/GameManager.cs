@@ -24,18 +24,15 @@ public class GameManager : MonoBehaviour
     [Header("Journal Tabs")]
     [SerializeField] public List<GameObject> tabs;
     private List<GameObject> inactiveTabs;
-    [SerializeField] public Sprite[] digImages;
     private bool journalVisible = true;
 
 
-    [Header("Player")]
+    [Header("Referenced Scripts")]
     [SerializeField] private PlayerController player;
-    private GameObject currentTile;
+    [SerializeField] private ExcavateManager excavate;
 
     public void PressTurnPage(GameObject target)
     {
-        inactiveTabs = tabs;
-
         // fade out page
         foreach (var x in tabs) { StartCoroutine(FadeOut(x)); }
 
@@ -94,22 +91,22 @@ public class GameManager : MonoBehaviour
 
     public void MakeVisible(GameObject obj, GameObject visibleTab)
     {
-        obj.SetActive(!obj.activeInHierarchy);
-
         if (obj.name == "Journal")
         {
             journalVisible = !journalVisible;
-            // Debug.Log("Journal Visibility " + journalVisible);
+            Debug.Log("Journal Visibility " + journalVisible);
 
             foreach (GameObject a in WhichChild(visibleTab))
             {
                 a.GetComponent<CanvasGroup>().alpha = 0;
+                a.SetActive(!obj.activeInHierarchy);
                 // Debug.Log(a + "is alpha 0");
             }
+            visibleTab.SetActive(!obj.activeInHierarchy);
             visibleTab.GetComponent<CanvasGroup>().alpha = 1;
         }
 
-        // Debug.Log("Button clicked " + obj.name);
+        obj.SetActive(!obj.activeInHierarchy);
     }
 
     private List<GameObject> WhichChild(GameObject target)
@@ -129,18 +126,13 @@ public class GameManager : MonoBehaviour
         cam.cullingMask ^= 1 << LayerMask.NameToLayer("Coordinates");
     }
 
-    public void Dig(Button butt)
+    public void DigTile()
     {
-        currentTile = player.currentTile;
-        int temp = currentTile.GetComponent<Tile>().DigStage();
         Image img = tabs[3].transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
+        int tmp = player.currentTile.GetComponent<Tile>().digStage;
 
-        img.sprite = digImages[temp];
-
-        // Debug.Log(tabs[3].GetComponent<Image>().sprite);
-
-
-        if (temp > 3) butt.interactable = false;
+        img.sprite = excavate.digImages[tmp];
+        MakeVisible(journal, tabs[3]);
     }
 
     void Start()

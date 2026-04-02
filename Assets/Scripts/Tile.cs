@@ -62,23 +62,13 @@ public class Tile : MonoBehaviour
         if (isExcavated) excavatedLayer.SetActive(true);
     }
 
-    // public string Dig()
-    // {
-    //     isExcavated = true;
-    //     // if (gameObject.tag == "Unit_Artifact") Debug.Log("Artifact found!");
-    //     // else Debug.Log("Jack Shit");
-    //     return gameObject.tag;
-    // }
-
     public int DigStage()
     {
-        digStage++;
-        // if (currentDig < 4) digImage.GetComponent<Image>().sprite = digImages[currentDig];
-        // else digImage.transform.GetChild(0).gameObject.GetComponent<Button>().interactable = false;
-        if (digStage > 2)
+        if (digStage < 3)
         {
-            Debug.Log("done digging");
-            isExcavated = true;
+            Debug.Log(digStage);
+            digStage++;
+            if (digStage > 2) isExcavated = true;
         }
         return digStage;
     }

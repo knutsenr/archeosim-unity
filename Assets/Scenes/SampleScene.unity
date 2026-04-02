@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1398904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 52574071}
   - component: {fileID: 52574073}
   - component: {fileID: 52574072}
+  - component: {fileID: 52574074}
   m_Layer: 5
   m_Name: DigSiftPage
   m_TagString: Controls
@@ -445,6 +446,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52574070}
   m_CullTransparentMesh: 1
+--- !u!114 &52574074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52574070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7276f4ce91951439f0f3e6f3839763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  digImage: {fileID: 1216211532}
+  siftImage: {fileID: 382824417}
+  digImages:
+  - {fileID: -8378967279583214499, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  - {fileID: 8318291011278641660, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  - {fileID: -8052754825210525296, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  - {fileID: 1501149643353709846, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  siftLayer1:
+  - {fileID: -5420210917313023333, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  - {fileID: -7717738629502174785, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  - {fileID: -5907322967158769555, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  - {fileID: -7272151328562094828, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  siftLayer2: []
+  siftLayer3: []
+  player: {fileID: 1627865505}
 --- !u!1 &55352664
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &117043441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -589,7 +617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &144156974
 RectTransform:
   m_ObjectHideFlags: 0
@@ -714,7 +742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &159941632
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1048,7 +1076,7 @@ RectTransform:
   m_GameObject: {fileID: 382824415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 4, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1883506714}
@@ -1079,7 +1107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8378967279583214499, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  m_Sprite: {fileID: -7272151328562094828, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2670,8 +2698,8 @@ RectTransform:
   m_Children:
   - {fileID: 144156974}
   - {fileID: 117043441}
-  - {fileID: 159941632}
   - {fileID: 1398904}
+  - {fileID: 159941632}
   m_Father: {fileID: 283032223}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3652,7 +3680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 83.5, y: 0}
+  m_AnchoredPosition: {x: 87.5, y: 21.3}
   m_SizeDelta: {x: 169.105, y: 68.6967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454336588
@@ -3699,8 +3727,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1526777319}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 52574074}
+        m_TargetAssemblyTypeName: ExcavateManager, Assembly-CSharp
         m_MethodName: Dig
         m_Mode: 2
         m_Arguments:
@@ -3873,12 +3901,8 @@ MonoBehaviour:
   - {fileID: 117043440}
   - {fileID: 159941631}
   - {fileID: 1398903}
-  digImages:
-  - {fileID: -8378967279583214499, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
-  - {fileID: 8318291011278641660, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
-  - {fileID: -8052754825210525296, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
-  - {fileID: 1501149643353709846, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
   player: {fileID: 1627865505}
+  excavate: {fileID: 52574074}
 --- !u!1 &1627865499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,7 +3919,7 @@ GameObject:
   - component: {fileID: 1627865504}
   - component: {fileID: 1627865506}
   m_Layer: 3
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3948,7 +3972,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3934539628086254216, guid: 1ccd15e8d90ee224bb1d3f1d392f8c0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5097,13 +5121,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1526777315}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 52574074}
+        m_TargetAssemblyTypeName: ExcavateManager, Assembly-CSharp
+        m_MethodName: Dig
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 1883506715}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

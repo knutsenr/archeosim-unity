@@ -54,16 +54,6 @@ public class PlayerController : MonoBehaviour
     else { anim.SetBool("moving", false); }
   }
 
-  public void DigTile()
-  {
-    Image img = gameManager.tabs[3].transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
-    int tmp = currentTile.GetComponent<Tile>().digStage;
-
-    img.sprite = gameManager.digImages[tmp];
-    gameManager.
-      MakeVisible(gameManager.journal, gameManager.tabs[3]);
-  }
-
   // Update is called once per frame
   void Update()
   {
@@ -73,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
     if (interact.WasPressedThisFrame())
     {
-      DigTile();
+      gameManager.DigTile();
       // gameManager.Dig(currentTile.GetComponent<Tile>());
     }
     else { isDigging = false; }
