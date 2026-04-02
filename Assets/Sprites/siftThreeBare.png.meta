@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 654f40e6aa942be44a2e62942318486f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7944955449231907476
+    second: siftThreeBare_0
+  - first:
+      213: -8414337107607427938
+    second: siftThreeBare_1
+  - first:
+      213: -558905939235964356
+    second: siftThreeBare_2
+  - first:
+      213: 3338615108346297819
+    second: siftThreeBare_3
+  - first:
+      213: 2322423990117326160
+    second: siftThreeBare_4
+  - first:
+      213: 8151800011827487821
+    second: siftThreeBare_5
+  - first:
+      213: 9171675246772038379
+    second: siftThreeBare_6
+  - first:
+      213: 6924896251395027580
+    second: siftThreeBare_7
+  - first:
+      213: 7619917278258839810
+    second: siftThreeBare_8
+  - first:
+      213: 7481870117278621370
+    second: siftThreeBare_9
+  - first:
+      213: 770095410131728170
+    second: siftThreeBare_10
+  - first:
+      213: -204609049903429903
+    second: siftThreeBare_11
+  - first:
+      213: 4307543404338095573
+    second: siftThreeBare_12
+  - first:
+      213: 4771707445365455376
+    second: siftThreeBare_13
+  - first:
+      213: -3813419157181508150
+    second: siftThreeBare_14
+  - first:
+      213: -5522403673960240724
+    second: siftThreeBare_15
+  - first:
+      213: -7070735242787077812
+    second: siftThreeBare_16
+  - first:
+      213: -7068574120626201187
+    second: siftThreeBare_17
+  - first:
+      213: 4105622121441421729
+    second: siftThreeBare_18
+  - first:
+      213: -4839132057312042168
+    second: siftThreeBare_19
+  - first:
+      213: -8043003094923892864
+    second: siftThreeBare_20
+  - first:
+      213: 2404332075615940643
+    second: siftThreeBare_21
+  - first:
+      213: 530395870336310773
+    second: siftThreeBare_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: siftThreeBare_0
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 272
+        width: 1096
+        height: 1704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a95cb03e6224e60800000000000000
+      internalID: 7944955449231907476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_1
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 309
+        width: 1098
+        height: 1930
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94eba05bf44a3b80800000000000000
+      internalID: -8414337107607427938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_2
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 1306
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3afbfc620e5e38f0800000000000000
+      internalID: -558905939235964356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_3
+      rect:
+        serializedVersion: 2
+        x: 3259
+        y: 272
+        width: 1096
+        height: 1704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bddbbb690c4255e20800000000000000
+      internalID: 3338615108346297819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_4
+      rect:
+        serializedVersion: 2
+        x: 4770
+        y: 309
+        width: 1098
+        height: 1930
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05dd9c47058ea3020800000000000000
+      internalID: 2322423990117326160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_5
+      rect:
+        serializedVersion: 2
+        x: 5892
+        y: 1306
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44a001bbe2012170800000000000000
+      internalID: 8151800011827487821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_6
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 272
+        width: 1096
+        height: 1704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea27171b06584f70800000000000000
+      internalID: 9171675246772038379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 827
+        width: 168
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72b5d2737c2a1060800000000000000
+      internalID: 6924896251395027580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_8
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1045
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201ca7c74626fb960800000000000000
+      internalID: 7619917278258839810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_9
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 894
+        width: 169
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe90042b31f4d760800000000000000
+      internalID: 7481870117278621370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_10
+      rect:
+        serializedVersion: 2
+        x: 2873
+        y: 785
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a277f0402bdefaa00800000000000000
+      internalID: 770095410131728170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_11
+      rect:
+        serializedVersion: 2
+        x: 3175
+        y: 827
+        width: 168
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f60da63725192df0800000000000000
+      internalID: -204609049903429903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_12
+      rect:
+        serializedVersion: 2
+        x: 4380
+        y: 1045
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5262667e777cb30800000000000000
+      internalID: 4307543404338095573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_13
+      rect:
+        serializedVersion: 2
+        x: 4686
+        y: 894
+        width: 169
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a3815d3a2883240800000000000000
+      internalID: 4771707445365455376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_14
+      rect:
+        serializedVersion: 2
+        x: 5895
+        y: 785
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5d68c1b73041bc0800000000000000
+      internalID: -3813419157181508150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_15
+      rect:
+        serializedVersion: 2
+        x: 6198
+        y: 827
+        width: 168
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9a9431e1b7c53b0800000000000000
+      internalID: -5522403673960240724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_16
+      rect:
+        serializedVersion: 2
+        x: 7403
+        y: 1045
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4147d052c3bfdd90800000000000000
+      internalID: -7070735242787077812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_17
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 718
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d5e87c94167ed90800000000000000
+      internalID: -7068574120626201187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_18
+      rect:
+        serializedVersion: 2
+        x: 4382
+        y: 718
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a9608221991af830800000000000000
+      internalID: 4105622121441421729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_19
+      rect:
+        serializedVersion: 2
+        x: 7405
+        y: 718
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843e5be5803f7dcb0800000000000000
+      internalID: -4839132057312042168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 232
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087a1bf7c43816090800000000000000
+      internalID: -8043003094923892864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_21
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 232
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3207a29b847ed5120800000000000000
+      internalID: 2404332075615940643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftThreeBare_22
+      rect:
+        serializedVersion: 2
+        x: 6431
+        y: 232
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fddab1eb385c5700800000000000000
+      internalID: 530395870336310773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      siftThreeBare_0: 7944955449231907476
+      siftThreeBare_1: -8414337107607427938
+      siftThreeBare_10: 770095410131728170
+      siftThreeBare_11: -204609049903429903
+      siftThreeBare_12: 4307543404338095573
+      siftThreeBare_13: 4771707445365455376
+      siftThreeBare_14: -3813419157181508150
+      siftThreeBare_15: -5522403673960240724
+      siftThreeBare_16: -7070735242787077812
+      siftThreeBare_17: -7068574120626201187
+      siftThreeBare_18: 4105622121441421729
+      siftThreeBare_19: -4839132057312042168
+      siftThreeBare_2: -558905939235964356
+      siftThreeBare_20: -8043003094923892864
+      siftThreeBare_21: 2404332075615940643
+      siftThreeBare_22: 530395870336310773
+      siftThreeBare_3: 3338615108346297819
+      siftThreeBare_4: 2322423990117326160
+      siftThreeBare_5: 8151800011827487821
+      siftThreeBare_6: 9171675246772038379
+      siftThreeBare_7: 6924896251395027580
+      siftThreeBare_8: 7619917278258839810
+      siftThreeBare_9: 7481870117278621370
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: e0d00a04f5734d349b824b8b84eb3bab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7808410999379864953
+    second: siftOneBare_0
+  - first:
+      213: -1032815018897787661
+    second: siftOneBare_1
+  - first:
+      213: -2414580046528655880
+    second: siftOneBare_2
+  - first:
+      213: -6493631228480047598
+    second: siftOneBare_3
+  - first:
+      213: -2482803688320479062
+    second: siftOneBare_4
+  - first:
+      213: 4482991222045621711
+    second: siftOneBare_5
+  - first:
+      213: -498941461616532730
+    second: siftOneBare_6
+  - first:
+      213: 3364489767648845900
+    second: siftOneBare_7
+  - first:
+      213: 5684685309350363712
+    second: siftOneBare_8
+  - first:
+      213: 6946993929889496427
+    second: siftOneBare_9
+  - first:
+      213: 2458343962888926896
+    second: siftOneBare_10
+  - first:
+      213: -8299989509892399031
+    second: siftOneBare_11
+  - first:
+      213: -5581530403154803340
+    second: siftOneBare_12
+  - first:
+      213: 4611610266350269817
+    second: siftOneBare_13
+  - first:
+      213: 5502826157646131929
+    second: siftOneBare_14
+  - first:
+      213: -838312510320610617
+    second: siftOneBare_15
+  - first:
+      213: -6703694862782434160
+    second: siftOneBare_16
+  - first:
+      213: -1374305146687743997
+    second: siftOneBare_17
+  - first:
+      213: 9126965339606373632
+    second: siftOneBare_18
+  - first:
+      213: 2033266650136108381
+    second: siftOneBare_19
+  - first:
+      213: 2899995833361431027
+    second: siftOneBare_20
+  - first:
+      213: -1881044866834395986
+    second: siftOneBare_21
+  - first:
+      213: 883986876052117299
+    second: siftOneBare_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: siftOneBare_0
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 272
+        width: 1096
+        height: 1704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d2a46ee6c0d5c60800000000000000
+      internalID: 7808410999379864953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_1
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 309
+        width: 1098
+        height: 1930
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f4b8ef5634baa1f0800000000000000
+      internalID: -1032815018897787661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_2
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 1306
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fdc9ec9d30bd7ed0800000000000000
+      internalID: -2414580046528655880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_3
+      rect:
+        serializedVersion: 2
+        x: 3259
+        y: 272
+        width: 1096
+        height: 1704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216301c6dccf1e5a0800000000000000
+      internalID: -6493631228480047598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_4
+      rect:
+        serializedVersion: 2
+        x: 4770
+        y: 309
+        width: 1098
+        height: 1930
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0d0ae233f4b8dd0800000000000000
+      internalID: -2482803688320479062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_5
+      rect:
+        serializedVersion: 2
+        x: 5892
+        y: 1306
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd3939b3c8c63e30800000000000000
+      internalID: 4482991222045621711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_6
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 272
+        width: 1096
+        height: 1704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603e1a852676319f0800000000000000
+      internalID: -498941461616532730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 827
+        width: 168
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40652b2e9111be20800000000000000
+      internalID: 3364489767648845900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_8
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1045
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042c5bb8b2f04ee40800000000000000
+      internalID: 5684685309350363712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_9
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 894
+        width: 169
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6dbbd72c2ea86060800000000000000
+      internalID: 6946993929889496427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_10
+      rect:
+        serializedVersion: 2
+        x: 2873
+        y: 785
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b678b33fcacd1220800000000000000
+      internalID: 2458343962888926896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_11
+      rect:
+        serializedVersion: 2
+        x: 3175
+        y: 827
+        width: 168
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9402567148380dc80800000000000000
+      internalID: -8299989509892399031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_12
+      rect:
+        serializedVersion: 2
+        x: 4380
+        y: 1045
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4754ae8abab6a82b0800000000000000
+      internalID: -5581530403154803340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_13
+      rect:
+        serializedVersion: 2
+        x: 4686
+        y: 894
+        width: 169
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9753a589a1bbfff30800000000000000
+      internalID: 4611610266350269817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_14
+      rect:
+        serializedVersion: 2
+        x: 5895
+        y: 785
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2b9333c37fd5c40800000000000000
+      internalID: 5502826157646131929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_15
+      rect:
+        serializedVersion: 2
+        x: 6198
+        y: 827
+        width: 168
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2f293a637bd54f0800000000000000
+      internalID: -838312510320610617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_16
+      rect:
+        serializedVersion: 2
+        x: 7403
+        y: 1045
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094fd3d3a01b7f2a0800000000000000
+      internalID: -6703694862782434160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_17
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 718
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3089fae10cc7dece0800000000000000
+      internalID: -1374305146687743997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_18
+      rect:
+        serializedVersion: 2
+        x: 4382
+        y: 718
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0055a80ae9e79ae70800000000000000
+      internalID: 9126965339606373632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_19
+      rect:
+        serializedVersion: 2
+        x: 7405
+        y: 718
+        width: 178
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5dd20fde3d973c10800000000000000
+      internalID: 2033266650136108381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 232
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9fe9978dade3820800000000000000
+      internalID: 2899995833361431027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_21
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 232
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac83c9e8af25e5e0800000000000000
+      internalID: -1881044866834395986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siftOneBare_22
+      rect:
+        serializedVersion: 2
+        x: 6431
+        y: 232
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3379135516d844c00800000000000000
+      internalID: 883986876052117299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      siftOneBare_0: 7808410999379864953
+      siftOneBare_1: -1032815018897787661
+      siftOneBare_10: 2458343962888926896
+      siftOneBare_11: -8299989509892399031
+      siftOneBare_12: -5581530403154803340
+      siftOneBare_13: 4611610266350269817
+      siftOneBare_14: 5502826157646131929
+      siftOneBare_15: -838312510320610617
+      siftOneBare_16: -6703694862782434160
+      siftOneBare_17: -1374305146687743997
+      siftOneBare_18: 9126965339606373632
+      siftOneBare_19: 2033266650136108381
+      siftOneBare_2: -2414580046528655880
+      siftOneBare_20: 2899995833361431027
+      siftOneBare_21: -1881044866834395986
+      siftOneBare_22: 883986876052117299
+      siftOneBare_3: -6493631228480047598
+      siftOneBare_4: -2482803688320479062
+      siftOneBare_5: 4482991222045621711
+      siftOneBare_6: -498941461616532730
+      siftOneBare_7: 3364489767648845900
+      siftOneBare_8: 5684685309350363712
+      siftOneBare_9: 6946993929889496427
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
