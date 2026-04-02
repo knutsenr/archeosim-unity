@@ -22,16 +22,24 @@ public class ExcavateManager : MonoBehaviour
 
     [Header("Scripts Referenced")]
     [SerializeField] private PlayerController player;
+    [SerializeField] private GameManager gameManager;
 
+    public void OpenExcavate()
+    {
+        int tmp = currentTile.digStage;
 
-    public void Dig(Button butt)
+        digImage.sprite = digImages[tmp];
+        gameManager.MakeVisible(gameManager.journal, gameManager.tabs[3]);
+    }
+
+    public void DigNext(Button butt)
     {
         int temp = currentTile.DigStage();
 
         if (temp > 3) butt.interactable = false;
         else digImage.sprite = digImages[temp];
 
-        // Debug.Log(tabs[3].GetComponent<Image>().sprite);
+        Debug.Log(digImages[temp]);
     }
 
     public void Sift(Button butt)
@@ -43,7 +51,6 @@ public class ExcavateManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentTile = player.currentTile.GetComponent<Tile>();
     }
 
     // Update is called once per frame

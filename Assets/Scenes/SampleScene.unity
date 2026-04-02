@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1398904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -317,7 +317,6 @@ GameObject:
   - component: {fileID: 52574071}
   - component: {fileID: 52574073}
   - component: {fileID: 52574072}
-  - component: {fileID: 52574074}
   m_Layer: 5
   m_Name: DigSiftPage
   m_TagString: Controls
@@ -446,33 +445,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52574070}
   m_CullTransparentMesh: 1
---- !u!114 &52574074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52574070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e7276f4ce91951439f0f3e6f3839763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  digImage: {fileID: 1216211532}
-  siftImage: {fileID: 382824417}
-  digImages:
-  - {fileID: -8378967279583214499, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
-  - {fileID: 8318291011278641660, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
-  - {fileID: -8052754825210525296, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
-  - {fileID: 1501149643353709846, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
-  siftLayer1:
-  - {fileID: -5420210917313023333, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
-  - {fileID: -7717738629502174785, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
-  - {fileID: -5907322967158769555, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
-  - {fileID: -7272151328562094828, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
-  siftLayer2: []
-  siftLayer3: []
-  player: {fileID: 1627865505}
 --- !u!1 &55352664
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,9 +3699,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 52574074}
+      - m_Target: {fileID: 1526777320}
         m_TargetAssemblyTypeName: ExcavateManager, Assembly-CSharp
-        m_MethodName: Dig
+        m_MethodName: DigNext
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1454336588}
@@ -3787,6 +3759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1526777317}
   - component: {fileID: 1526777319}
+  - component: {fileID: 1526777320}
   - component: {fileID: 1526777316}
   m_Layer: 0
   m_Name: JournalManager
@@ -3902,7 +3875,35 @@ MonoBehaviour:
   - {fileID: 159941631}
   - {fileID: 1398903}
   player: {fileID: 1627865505}
-  excavate: {fileID: 52574074}
+  excavate: {fileID: 1526777320}
+--- !u!114 &1526777320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526777315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7276f4ce91951439f0f3e6f3839763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  digImage: {fileID: 1216211532}
+  siftImage: {fileID: 382824417}
+  digImages:
+  - {fileID: -8378967279583214499, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  - {fileID: 8318291011278641660, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  - {fileID: -8052754825210525296, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  - {fileID: 1501149643353709846, guid: 16d145b1b98b3c84bb946bb45f93c9cf, type: 3}
+  siftLayer1:
+  - {fileID: -5420210917313023333, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  - {fileID: -7717738629502174785, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  - {fileID: -5907322967158769555, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  - {fileID: -7272151328562094828, guid: 3c072cba3a617a54b90f5ff854eee22f, type: 3}
+  siftLayer2: []
+  siftLayer3: []
+  player: {fileID: 1627865505}
+  gameManager: {fileID: 1526777319}
 --- !u!1 &1627865499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3976,7 +3977,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3934539628086254216, guid: 1ccd15e8d90ee224bb1d3f1d392f8c0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.3125, y: 0.921875}
@@ -4105,12 +4106,44 @@ MonoBehaviour:
     m_ActionId: 6a0a6762-912f-4c9e-a6bf-ca3c4ead50dd
     m_ActionName: 'gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1526777320}
+        m_TargetAssemblyTypeName: ExcavateManager, Assembly-CSharp
+        m_MethodName: OpenExcavate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 899308b0-fffc-49d6-97f6-d193bdfc25c4
     m_ActionName: 'gameplay/Dig[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1627865505}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: ShowCoordinates
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5b9893df-9b63-46a4-8b82-f3e6ee066b85
+    m_ActionName: 'gameplay/ShowCoordinates[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6ac07ee1-a5cd-41e0-bd04-96399e60a3db
+    m_ActionName: 'gameplay/Dialogue[/Keyboard/f]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: gameplay
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 519420031}
 --- !u!114 &1627865505
@@ -4129,15 +4162,6 @@ MonoBehaviour:
   gridScript: {fileID: 925405175}
   gameManager: {fileID: 1526777319}
   moveSpeed: 3
-  interact:
-    m_Name: Interact
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a2c0448d-9779-4917-b960-6d4587ec640a
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   currentTile: {fileID: 0}
   isDigging: 0
 --- !u!95 &1627865506
@@ -4632,9 +4656,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1526777319}
+      - m_Target: {fileID: 1526777315}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: MakeVisible
+        m_MethodName: 
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 283032222}
@@ -5121,9 +5145,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 52574074}
+      - m_Target: {fileID: 1526777320}
         m_TargetAssemblyTypeName: ExcavateManager, Assembly-CSharp
-        m_MethodName: Dig
+        m_MethodName: Sift
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1883506715}

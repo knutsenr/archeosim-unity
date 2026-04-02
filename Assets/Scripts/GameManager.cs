@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
 
         // // bring new page up
         StartCoroutine(FadeIn(target));
+
+        foreach (var x in WhichChild(target)) x.SetActive(false);
     }
 
     public IEnumerator TurnPage()
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator FadeIn(GameObject target)
     {
+        target.SetActive(true);
         CanvasGroup targ = target.GetComponent<CanvasGroup>();
 
         float counter = 0f;
@@ -99,9 +102,9 @@ public class GameManager : MonoBehaviour
             foreach (GameObject a in WhichChild(visibleTab))
             {
                 a.GetComponent<CanvasGroup>().alpha = 0;
-                a.SetActive(!obj.activeInHierarchy);
-                // Debug.Log(a + "is alpha 0");
+                a.SetActive(false);
             }
+            // visibleTab.SetActive(!obj.activeInHierarchy);
             visibleTab.SetActive(!obj.activeInHierarchy);
             visibleTab.GetComponent<CanvasGroup>().alpha = 1;
         }
@@ -124,15 +127,6 @@ public class GameManager : MonoBehaviour
     public void ShowCoordinates()
     {
         cam.cullingMask ^= 1 << LayerMask.NameToLayer("Coordinates");
-    }
-
-    public void DigTile()
-    {
-        Image img = tabs[3].transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
-        int tmp = player.currentTile.GetComponent<Tile>().digStage;
-
-        img.sprite = excavate.digImages[tmp];
-        MakeVisible(journal, tabs[3]);
     }
 
     void Start()

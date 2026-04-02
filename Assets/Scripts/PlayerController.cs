@@ -16,9 +16,9 @@ public class PlayerController : MonoBehaviour
 
   [Header("Movement Settings")]
   public float moveSpeed = 5f;
+  public PlayerControls controls;
   float horizontalMovement;
   float verticalMovement;
-  [SerializeField] InputAction interact;
   public GameObject currentTile;
 
   [HideInInspector]
@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
   private void Awake()
   {
     rend = GetComponent<SpriteRenderer>();
-    interact = InputSystem.actions.FindAction("Dig");
   }
 
   private void Start()
@@ -40,12 +39,19 @@ public class PlayerController : MonoBehaviour
 
   public void Move(InputAction.CallbackContext context)
   {
+    Debug.Log("moving");
     anim.SetBool("moving", true);
     horizontalMovement = context.ReadValue<Vector2>().x;
     verticalMovement = context.ReadValue<Vector2>().y;
   }
 
-  private void AnimateMove()
+  public void ShowCoordinates(InputAction.CallbackContext context)
+  {
+    Debug.Log("Showing");
+    gameManager.ShowCoordinates();
+  }
+
+  public void AnimateMove()
   {
     if (rb.linearVelocity.x < 0) { anim.SetTrigger("walkingLeft"); rend.flipX = true; }
     else if (rb.linearVelocity.x > 0) { anim.SetTrigger("walkingLeft"); rend.flipX = false; }
@@ -60,13 +66,6 @@ public class PlayerController : MonoBehaviour
     rb.linearVelocity = new Vector2(horizontalMovement * moveSpeed, verticalMovement * moveSpeed);
 
     AnimateMove();
-
-    if (interact.WasPressedThisFrame())
-    {
-      gameManager.DigTile();
-      // gameManager.Dig(currentTile.GetComponent<Tile>());
-    }
-    else { isDigging = false; }
   }
 
 }
