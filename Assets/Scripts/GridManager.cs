@@ -18,7 +18,6 @@ public class GridManager : MonoBehaviour
     [SerializeField] private GridLayoutGroup gridLayout;
     private Dictionary<Vector2, SmallTile> smallTiles;
 
-
     void GenerateGrid()
     {
         tiles = new Dictionary<Vector2, Tile>();
@@ -64,14 +63,4 @@ public class GridManager : MonoBehaviour
     {
         GenerateGrid();
     }
-
-    // public Tile GetTileAtPosition(Vector2 pos)
-    // {
-    //     if (tiles.TryGetValue(pos, out var tile))
-    //     {
-    //         return tile;
-    //     }
-    //     return null;
-    // }
-
 }

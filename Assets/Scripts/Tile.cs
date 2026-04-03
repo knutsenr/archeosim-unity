@@ -2,7 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
-using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Tile : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Tile : MonoBehaviour
     public int obstacleChance;
     public bool isExcavated = false;
     public int digStage = 0;
+    public string artifact;
+    public int artLayer;
 
     public void Init(bool isOffset, int rand)
     {
@@ -38,6 +41,18 @@ public class Tile : MonoBehaviour
 
     public void IsArtifact()
     {
+        int artRand = Random.Range(5, 0); // return 1, 2, 3, 4, or 5. i think.
+        artLayer = Random.Range(3, 0); // return 1, 2, or 3
+
+        // Which artifact   
+        artifact = artRand switch
+        {
+            5 => "Artifact",
+            3 => "Feature",
+            4 => "Feature",
+            _ => "Chert",
+        };
+
         gameObject.tag = "Unit_Artifact";
         // excavatedLayer.GetComponent<SpriteRenderer>().color = artifactColor;
     }
@@ -52,6 +67,8 @@ public class Tile : MonoBehaviour
     {
         hilight.SetActive(true);
         other.gameObject.GetComponent<PlayerController>().currentTile = this.gameObject;
+
+        if (this.gameObject.tag == "Unit_Artifact") { Debug.Log("Dig Here"); }
         // if (other.gameObject.GetComponent<PlayerController>().isDigging) Dig();
         // else Debug.Log("Already excavated!");
     }

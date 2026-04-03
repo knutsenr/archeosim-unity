@@ -20,10 +20,18 @@ public class ExcavateManager : MonoBehaviour
     [SerializeField] private Sprite[] siftLayer1;
     [SerializeField] private Sprite[] siftLayer2;
     [SerializeField] private Sprite[] siftLayer3;
+    [SerializeField] private Sprite[] artifactImages;
+
+    [Header("Artifacts")]
+    [SerializeField] private GridLayoutGroup gridLayout;
+    [SerializeField] private GridLayoutGroup allArtifactGrid;
+    [SerializeField] private Artifact artifactPrefab;
+    public List<Artifact> allArtifacts;
 
     [Header("Scripts Referenced")]
     [SerializeField] private PlayerController player;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private SmallTile tile;
 
     private bool layerSifted = false;
     private int tempLayer = 0;
@@ -49,6 +57,7 @@ public class ExcavateManager : MonoBehaviour
                 1 => siftLayer1[0],
                 2 => siftLayer2[0],
                 3 => siftLayer3[0],
+                _ => siftLayer1[0],
             };
         }
 
@@ -59,8 +68,11 @@ public class ExcavateManager : MonoBehaviour
     {
         StartCoroutine(AnimateSift(tempLayer));
 
-        if (currentTile.tag == "Unit_Artifact") Debug.Log("Artifact Here");
-        Debug.Log("Sift" + tempLayer);
+        if (currentTile.tag == "Unit_Artifact" && tempLayer == currentTile.artLayer)
+        {
+            Debug.Log("Artifact in " + tempLayer);
+            DisplayArtifact();
+        }
     }
 
     public IEnumerator AnimateSift(int layer)
@@ -79,6 +91,36 @@ public class ExcavateManager : MonoBehaviour
         }
 
         layerSifted = true;
+    }
+
+    public void DisplayArtifact()
+    {
+        Debug.Log(currentTile.artifact + " found in layer " + tempLayer);
+        Artifact art = Instantiate(artifactPrefab, gridLayout.transform);
+
+        art.unitText.text = "Unit: " + $"({currentTile.coordinateBox.text})";
+        art.layerText.text = "Layer: " + $"{tempLayer}";
+        art.artifactText.text = currentTile.artifact;
+
+        if (currentTile.artifact == "Artifact") { art.image.sprite = artifactImages[0]; }
+        else { art.image.sprite = artifactImages[1]; }
+
+        allArtifacts.Add(art);
+    }
+
+    public void ShowArtifacts()
+    {
+        // foreach (var z in allArtifacts)
+        // {
+        for (int y = 0; y < 2; y++)
+        {
+            for (int x = 0; x < 3; x++)
+            {
+                Artifact art = Instantiate(allArtifacts[x], allArtifactGrid.transform);
+                // SmallTile art = Instantiate(tile, allArtifactGrid.transform);
+            }
+        }
+        // }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
   [HideInInspector]
   public bool isDigging = false;
+  int test = 0;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is create
 
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
   public void Move(InputAction.CallbackContext context)
   {
-    Debug.Log("moving");
+    // Debug.Log("moving");
     anim.SetBool("moving", true);
     horizontalMovement = context.ReadValue<Vector2>().x;
     verticalMovement = context.ReadValue<Vector2>().y;
@@ -64,6 +65,8 @@ public class PlayerController : MonoBehaviour
   void Update()
   {
     rb.linearVelocity = new Vector2(horizontalMovement * moveSpeed, verticalMovement * moveSpeed);
+
+    // if (currentTile.tag == "Unit_Artifact" && test == 0) { Debug.Log("Dig Here"); test++; }
 
     AnimateMove();
   }

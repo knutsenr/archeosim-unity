@@ -23,9 +23,10 @@ public class GameManager : MonoBehaviour
 
     [Header("Journal Tabs")]
     [SerializeField] public List<GameObject> tabs;
+    // [SerializeField] private GridLayoutGroup gridLayout;
+
     private List<GameObject> inactiveTabs;
     private bool journalVisible = true;
-
 
     [Header("Referenced Scripts")]
     [SerializeField] private PlayerController player;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
 
         // turn page animation
         StartCoroutine(TurnPage());
+        if (target == tabs[4]) excavate.ShowArtifacts();
 
         // // bring new page up
         StartCoroutine(FadeIn(target));
