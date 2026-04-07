@@ -4832,6 +4832,86 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[0].nodeID
+      value: p1
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[1].nodeID
+      value: 01
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[2].nodeID
+      value: 02
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[0].speakerName
+      value: Professor
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[1].speakerName
+      value: Professor
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[2].speakerName
+      value: Professor
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[0].dialogueText
+      value: Hello, what can I help you with?
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[1].dialogueText
+      value: 'Press [SPACE]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[2].dialogueText
+      value: Have you found artifacts?
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[0].options.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[1].options.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[0].options.Array.data[0].optionText
+      value: How do I dig again?
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[0].options.Array.data[1].optionText
+      value: What do I do next?
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[1].options.Array.data[0].optionText
+      value: How do I dig again?
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[1].options.Array.data[1].optionText
+      value: What do I do next?
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[0].options.Array.data[0].targetNodeID
+      value: o1
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[0].options.Array.data[1].targetNodeID
+      value: o2
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[1].options.Array.data[0].targetNodeID
+      value: o1
+      objectReference: {fileID: 0}
+    - target: {fileID: 962410806932059145, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
+      propertyPath: dialogueNodes.Array.data[1].options.Array.data[1].targetNodeID
+      value: o2
+      objectReference: {fileID: 0}
     - target: {fileID: 2532494503252924178, guid: 05ec65e363fee8042a64d9b822835126, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15

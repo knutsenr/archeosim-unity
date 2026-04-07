@@ -109,6 +109,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Dialogue"",
+                    ""type"": ""Button"",
+                    ""id"": ""527a05af-ef24-4277-91a0-8e326979db1e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -177,6 +186,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Dig"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""48c42017-faa9-4ced-a180-d83c4a514349"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dialogue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -187,6 +207,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_gameplay = asset.FindActionMap("gameplay", throwIfNotFound: true);
         m_gameplay_Move = m_gameplay.FindAction("Move", throwIfNotFound: true);
         m_gameplay_Dig = m_gameplay.FindAction("Dig", throwIfNotFound: true);
+        m_gameplay_Dialogue = m_gameplay.FindAction("Dialogue", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -269,6 +290,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
     private readonly InputAction m_gameplay_Move;
     private readonly InputAction m_gameplay_Dig;
+    private readonly InputAction m_gameplay_Dialogue;
     /// <summary>
     /// Provides access to input actions defined in input action map "gameplay".
     /// </summary>
@@ -288,6 +310,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "gameplay/Dig".
         /// </summary>
         public InputAction @Dig => m_Wrapper.m_gameplay_Dig;
+        /// <summary>
+        /// Provides access to the underlying input action "gameplay/Dialogue".
+        /// </summary>
+        public InputAction @Dialogue => m_Wrapper.m_gameplay_Dialogue;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -320,6 +346,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Dig.started += instance.OnDig;
             @Dig.performed += instance.OnDig;
             @Dig.canceled += instance.OnDig;
+            @Dialogue.started += instance.OnDialogue;
+            @Dialogue.performed += instance.OnDialogue;
+            @Dialogue.canceled += instance.OnDialogue;
         }
 
         /// <summary>
@@ -337,6 +366,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Dig.started -= instance.OnDig;
             @Dig.performed -= instance.OnDig;
             @Dig.canceled -= instance.OnDig;
+            @Dialogue.started -= instance.OnDialogue;
+            @Dialogue.performed -= instance.OnDialogue;
+            @Dialogue.canceled -= instance.OnDialogue;
         }
 
         /// <summary>
@@ -391,5 +423,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDig(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Dialogue" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDialogue(InputAction.CallbackContext context);
     }
 }
